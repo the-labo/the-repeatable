@@ -15,6 +15,17 @@
           "computed": false
         }
       },
+      "ItemComponent": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "Item component",
+        "defaultValue": {
+          "value": "'li'",
+          "computed": false
+        }
+      },
       "horizontal": {
         "type": {
           "name": "bool"
@@ -45,6 +56,17 @@
         "description": "Items to render",
         "defaultValue": {
           "value": "[]",
+          "computed": false
+        }
+      },
+      "keyFor": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Get key for data",
+        "defaultValue": {
+          "value": "(data, i) => i",
           "computed": false
         }
       },

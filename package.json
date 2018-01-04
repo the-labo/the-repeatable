@@ -1,6 +1,6 @@
 {
   "name": "the-repeatable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Repeatable of the-component",
   "main": "shim",
   "scripts": {
