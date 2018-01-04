@@ -1,0 +1,93 @@
+{
+  "TheRepeatable": {
+    "description": "Repeatable of the-component",
+    "displayName": "TheRepeatable",
+    "methods": [],
+    "props": {
+      "ListComponent": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "List component",
+        "defaultValue": {
+          "value": "'ul'",
+          "computed": false
+        }
+      },
+      "horizontal": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Render as horizontal list",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "spinning": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Shows spinner",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "data": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "Items to render",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "render": {
+        "type": {
+          "name": "func"
+        },
+        "required": true,
+        "description": "Renderer",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
+      "alt": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Alt text when empty",
+        "defaultValue": {
+          "value": "'Data Not Found'",
+          "computed": false
+        }
+      }
+    }
+  },
+  "TheRepeatableStyle": {
+    "description": "Style for TheRepeatable",
+    "displayName": "TheRepeatableStyle",
+    "methods": [],
+    "props": {
+      "options": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style options",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      }
+    }
+  }
+}
