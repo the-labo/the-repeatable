@@ -27,7 +27,7 @@ class TheRepeatable extends React.Component {
       keyFor,
       render,
     } = props
-    const empty = spinning && data.length === 0
+    const empty = !spinning && data.length === 0
     return (
       <div {...htmlAttributesFor(props, {except: ['className', 'data', 'alt']})}
            {...eventHandlersFor(props, {except: []})}
@@ -40,7 +40,6 @@ class TheRepeatable extends React.Component {
                  className='the-repeatable-spin'/>
         <TheCondition if={empty}>
           <div className={'the-repeatable-alt'}>{alt}</div>
-
         </TheCondition>
         <TheCondition unless={empty}>
           <ListComponent className={'the-repeatable-list'}>
