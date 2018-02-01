@@ -59,9 +59,9 @@ TheRepeatableStyle.data = (options) => {
       flexGrow: '1',
     },
     '.the-repeatable-alt': {
-      color: lightTextColor,
+      color: '#E0E0E0',
       width: '100%',
-      padding: '8px 16px',
+      padding: '32px 16px',
       textAlign: 'center',
       fontSize: '1.25em'
     }
