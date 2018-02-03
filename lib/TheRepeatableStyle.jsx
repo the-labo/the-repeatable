@@ -61,7 +61,7 @@ TheRepeatableStyle.data = (options) => {
     '.the-repeatable-alt': {
       color: '#E0E0E0',
       width: '100%',
-      padding: '32px 16px',
+      padding: '48px 16px',
       textAlign: 'center',
       fontSize: '1.25em'
     }
