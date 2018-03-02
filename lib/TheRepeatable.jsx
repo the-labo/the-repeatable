@@ -1,12 +1,12 @@
 'use strict'
 
-import React from 'react'
-import PropTypes from 'prop-types'
 import c from 'classnames'
-import TheRepeatableStyle from './TheRepeatableStyle'
-import { htmlAttributesFor, eventHandlersFor } from 'the-component-util'
-import { TheSpin } from 'the-spin'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { eventHandlersFor, htmlAttributesFor } from 'the-component-util'
 import { TheCondition } from 'the-condition'
+import { TheSpin } from 'the-spin'
+import TheRepeatableStyle from './TheRepeatableStyle'
 
 /**
  * Repeatable of the-component
@@ -16,36 +16,36 @@ class TheRepeatable extends React.Component {
     const s = this
     const {props} = s
     const {
-      className,
-      children,
-      spinning,
-      data = [],
-      alt,
-      horizontal,
-      ListComponent,
       ItemComponent,
+      ListComponent,
+      alt,
+      children,
+      className,
+      data = [],
+      horizontal,
       keyFor,
       render,
+      spinning,
     } = props
     const empty = !spinning && data.length === 0
     return (
       <div {...htmlAttributesFor(props, {except: ['className', 'data', 'alt']})}
            {...eventHandlersFor(props, {except: []})}
            className={c('the-repeatable', className, {
-             'the-repeatable-horizontal': horizontal
+             'the-repeatable-horizontal': horizontal,
            })}
       >
-        <TheSpin cover
-                 enabled={spinning}
-                 className='the-repeatable-spin'/>
+        <TheSpin className='the-repeatable-spin'
+                 cover
+                 enabled={spinning}/>
         <TheCondition if={empty}>
-          <div className={'the-repeatable-alt'}>{alt}</div>
+          <div className='the-repeatable-alt'>{alt}</div>
         </TheCondition>
         <TheCondition unless={empty}>
-          <ListComponent className={'the-repeatable-list'}>
+          <ListComponent className='the-repeatable-list'>
             {data.map((data, i) => (
-              <ItemComponent key={keyFor(data, i)}
-                             className={'the-repeatable-item'}>
+              <ItemComponent className='the-repeatable-item'
+                             key={keyFor(data, i)}>
                 {render(data, i)}
               </ItemComponent>
             ))}
@@ -61,32 +61,32 @@ TheRepeatable.Style = TheRepeatableStyle
 
 TheRepeatable.propTypes = {
   /** List component */
-  ListComponent: PropTypes.any,
   /** Item component */
   ItemComponent: PropTypes.any,
-  /** Render as horizontal list */
-  horizontal: PropTypes.bool,
-  /** Shows spinner */
-  spinning: PropTypes.bool,
+  ListComponent: PropTypes.any,
+  /** Alt text when empty */
+  alt: PropTypes.node,
   /** Items to render */
   data: PropTypes.array,
+  /** Render as horizontal list */
+  horizontal: PropTypes.bool,
   /** Get key for data */
   keyFor: PropTypes.func,
   /** Renderer */
   render: PropTypes.func.isRequired,
-  /** Alt text when empty */
-  alt: PropTypes.node
+  /** Shows spinner */
+  spinning: PropTypes.bool,
 }
 
 TheRepeatable.defaultProps = {
-  ListComponent: 'ul',
   ItemComponent: 'li',
-  horizontal: false,
-  spinning: false,
+  ListComponent: 'ul',
+  alt: 'Data Not Found',
   data: [],
-  render: null,
+  horizontal: false,
   keyFor: (data, i) => i,
-  alt: 'Data Not Found'
+  render: null,
+  spinning: false,
 }
 
 TheRepeatable.displayName = 'TheRepeatable'
