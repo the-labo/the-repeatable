@@ -4,17 +4,6 @@
     "displayName": "TheRepeatable",
     "methods": [],
     "props": {
-      "ListComponent": {
-        "type": {
-          "name": "any"
-        },
-        "required": false,
-        "description": "List component",
-        "defaultValue": {
-          "value": "'ul'",
-          "computed": false
-        }
-      },
       "ItemComponent": {
         "type": {
           "name": "any"
@@ -26,25 +15,25 @@
           "computed": false
         }
       },
-      "horizontal": {
+      "ListComponent": {
         "type": {
-          "name": "bool"
+          "name": "any"
         },
         "required": false,
-        "description": "Render as horizontal list",
+        "description": "",
         "defaultValue": {
-          "value": "false",
+          "value": "'ul'",
           "computed": false
         }
       },
-      "spinning": {
+      "alt": {
         "type": {
-          "name": "bool"
+          "name": "node"
         },
         "required": false,
-        "description": "Shows spinner",
+        "description": "Alt text when empty",
         "defaultValue": {
-          "value": "false",
+          "value": "'Data Not Found'",
           "computed": false
         }
       },
@@ -56,6 +45,17 @@
         "description": "Items to render",
         "defaultValue": {
           "value": "[]",
+          "computed": false
+        }
+      },
+      "horizontal": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Render as horizontal list",
+        "defaultValue": {
+          "value": "false",
           "computed": false
         }
       },
@@ -81,14 +81,14 @@
           "computed": false
         }
       },
-      "alt": {
+      "spinning": {
         "type": {
-          "name": "node"
+          "name": "bool"
         },
         "required": false,
-        "description": "Alt text when empty",
+        "description": "Shows spinner",
         "defaultValue": {
-          "value": "'Data Not Found'",
+          "value": "false",
           "computed": false
         }
       }
