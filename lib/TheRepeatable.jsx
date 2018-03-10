@@ -13,8 +13,7 @@ import TheRepeatableStyle from './TheRepeatableStyle'
  */
 class TheRepeatable extends React.Component {
   render () {
-    const s = this
-    const {props} = s
+    const {props} = this
     const {
       ItemComponent,
       ListComponent,
@@ -31,6 +30,7 @@ class TheRepeatable extends React.Component {
     return (
       <div {...htmlAttributesFor(props, {except: ['className', 'data', 'alt']})}
            {...eventHandlersFor(props, {except: []})}
+           aria-busy={spinning}
            className={c('the-repeatable', className, {
              'the-repeatable-horizontal': horizontal,
            })}
@@ -42,10 +42,14 @@ class TheRepeatable extends React.Component {
           <div className='the-repeatable-alt'>{alt}</div>
         </TheCondition>
         <TheCondition unless={empty}>
-          <ListComponent className='the-repeatable-list'>
+          <ListComponent className='the-repeatable-list'
+                         role='list'
+          >
             {data.map((data, i) => (
               <ItemComponent className='the-repeatable-item'
-                             key={keyFor(data, i)}>
+                             key={keyFor(data, i)}
+                             role='listitem'
+              >
                 {render(data, i)}
               </ItemComponent>
             ))}

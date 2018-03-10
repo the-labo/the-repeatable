@@ -144,14 +144,14 @@ Repeatable of the-component
 
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
-| `ListComponent` | any  | List component | `'ul'` |
 | `ItemComponent` | any  | Item component | `'li'` |
-| `horizontal` | bool  | Render as horizontal list | `false` |
-| `spinning` | bool  | Shows spinner | `false` |
+| `ListComponent` | any  |  | `'ul'` |
+| `alt` | node  | Alt text when empty | `'Data Not Found'` |
 | `data` | array  | Items to render | `[]` |
+| `horizontal` | bool  | Render as horizontal list | `false` |
 | `keyFor` | func  | Get key for data | `(data, i) => i` |
 | `render` | func  | Renderer | `null` |
-| `alt` | node  | Alt text when empty | `'Data Not Found'` |
+| `spinning` | bool  | Shows spinner | `false` |
 
 ### TheRepeatableStyle
 
