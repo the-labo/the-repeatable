@@ -32,6 +32,7 @@ TheRepeatableStyle.data = (options) => {
   } = options
   return asStyleData('.the-repeatable', {
     '.the-repeatable-alt': {
+      boxSizing: 'border-box',
       color: '#E0E0E0',
       fontSize: '1.25em',
       padding: '48px 16px',

@@ -2,7 +2,7 @@
 /**
  * Repeatable of the-component
  * @module the-repeatable
- * @version 1.0.6
+ * @version 1.0.7
  */
 'use strict'
 
