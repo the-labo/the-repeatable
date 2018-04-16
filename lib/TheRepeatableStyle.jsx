@@ -54,7 +54,7 @@ TheRepeatableStyle.data = (options) => {
       padding: 0,
     },
     '&': {
-      minHeight: '36px',
+      minHeight: '84px',
       position: 'relative',
     },
     '&.the-repeatable-horizontal': {
