@@ -9,7 +9,6 @@ import TheRepeatable from './TheRepeatable'
 import TheRepeatableStyle from './TheRepeatableStyle'
 
 export {
-  TheRepeatable,
-  TheRepeatableStyle,
+ TheRepeatable,
+ TheRepeatableStyle,
 }
-
