@@ -43,6 +43,7 @@ TheRepeatableStyle.data = (options) => {
       display: 'inline-block',
       flexGrow: '1',
       margin: '0',
+      maxWidth: '100%',
       padding: '0',
     },
     '.the-repeatable-list': {
