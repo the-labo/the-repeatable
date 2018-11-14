@@ -13,7 +13,7 @@ import TheRepeatableStyle from './TheRepeatableStyle'
  */
 class TheRepeatable extends React.Component {
   render () {
-    const {props} = this
+    const { props } = this
     const {
       ItemComponent,
       ListComponent,
@@ -28,8 +28,8 @@ class TheRepeatable extends React.Component {
     } = props
     const empty = !spinning && data.length === 0
     return (
-      <div {...htmlAttributesFor(props, {except: ['className', 'data', 'alt']})}
-           {...eventHandlersFor(props, {except: []})}
+      <div {...htmlAttributesFor(props, { except: ['className', 'data', 'alt'] })}
+           {...eventHandlersFor(props, { except: [] })}
            aria-busy={spinning}
            className={c('the-repeatable', className, {
              'the-repeatable-horizontal': horizontal,

@@ -7,8 +7,8 @@ import { asStyleData } from 'the-component-util'
 import { TheStyle } from 'the-style'
 
 /** Style for TheRepeatable */
-const TheRepeatableStyle = ({className, id, options}) => (
-  <TheStyle {...{id}}
+const TheRepeatableStyle = ({ className, id, options }) => (
+  <TheStyle {...{ id }}
             className={c('the-repeatable-style', className)}
             styles={TheRepeatableStyle.data(options)}
   />
@@ -25,12 +25,16 @@ TheRepeatableStyle.defaultProps = {
 }
 
 TheRepeatableStyle.data = (options) => {
-  const {ThemeValues} = TheStyle
+  const { ThemeValues } = TheStyle
   const {
     dominantColor = ThemeValues.dominantColor,
     lightTextColor = ThemeValues.lightTextColor,
   } = options
-  return asStyleData('.the-repeatable', {
+  return asStyleData({
+    '.the-repeatable': {
+      minHeight: '84px',
+      position: 'relative',
+    },
     '.the-repeatable-alt': {
       boxSizing: 'border-box',
       color: '#E0E0E0',
@@ -54,11 +58,7 @@ TheRepeatableStyle.data = (options) => {
       margin: 0,
       padding: 0,
     },
-    '&': {
-      minHeight: '84px',
-      position: 'relative',
-    },
-    '&.the-repeatable-horizontal': {
+    '.the-repeatable.the-repeatable-horizontal': {
       '.the-repeatable-item': {
         flexShrink: '0',
       },
