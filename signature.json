@@ -20,7 +20,7 @@
           "name": "any"
         },
         "required": false,
-        "description": "",
+        "description": "List component",
         "defaultValue": {
           "value": "'ul'",
           "computed": false
@@ -59,6 +59,17 @@
           "computed": false
         }
       },
+      "introItem": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Intro item",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
       "keyFor": {
         "type": {
           "name": "func"
@@ -67,6 +78,17 @@
         "description": "Get key for data",
         "defaultValue": {
           "value": "(data, i) => i",
+          "computed": false
+        }
+      },
+      "outroItem": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Outro item",
+        "defaultValue": {
+          "value": "null",
           "computed": false
         }
       },

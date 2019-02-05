@@ -140,11 +140,13 @@ Repeatable of the-component
 | Name | Type | Description | Default |
 | --- | --- | ---- | ---- |
 | `ItemComponent` | any  | Item component | `'li'` |
-| `ListComponent` | any  |  | `'ul'` |
+| `ListComponent` | any  | List component | `'ul'` |
 | `alt` | node  | Alt text when empty | `'Data Not Found'` |
 | `data` | array  | Items to render | `[]` |
 | `horizontal` | bool  | Render as horizontal list | `false` |
+| `introItem` | node  | Intro item | `null` |
 | `keyFor` | func  | Get key for data | `(data, i) => i` |
+| `outroItem` | node  | Outro item | `null` |
 | `render` | func  | Renderer | `null` |
 | `spinning` | bool  | Shows spinner | `false` |
 

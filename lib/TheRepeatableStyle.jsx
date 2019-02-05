@@ -8,9 +8,10 @@ import { TheStyle } from 'the-style'
 
 /** Style for TheRepeatable */
 const TheRepeatableStyle = ({ className, id, options }) => (
-  <TheStyle {...{ id }}
-            className={c('the-repeatable-style', className)}
-            styles={TheRepeatableStyle.data(options)}
+  <TheStyle
+    {...{ id }}
+    className={c('the-repeatable-style', className)}
+    styles={TheRepeatableStyle.data(options)}
   />
 )
 
