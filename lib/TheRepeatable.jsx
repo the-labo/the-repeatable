@@ -51,7 +51,7 @@ class TheRepeatable extends React.Component {
                 key={keyFor(data, i)}
                 role='listitem'
               >
-                {render(data, i)}
+                  {render(data, i)}
               </ItemComponent>
             ))}
             {outroItem}

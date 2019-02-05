@@ -1,7 +1,7 @@
 {
   "name": "the-repeatable",
   "description": "Repeatable of the-component",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "author": {
     "name": "okunishinishi",
     "email": "okunishinishi@gmail.com",
@@ -19,7 +19,7 @@
     "the-style": "^2.2.6"
   },
   "devDependencies": {
-    "@babel/runtime": "^7.0.0-rc.1",
+    "@babel/runtime": "^7.3.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router-dom": "^4.3.1",
